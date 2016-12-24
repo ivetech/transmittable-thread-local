@@ -150,6 +150,7 @@ public final class TtlRunnable implements Runnable {
             return Collections.emptyList();
         }
         List<TtlRunnable> copy = new ArrayList<TtlRunnable>();
+        
         for (Runnable task : tasks) {
             copy.add(TtlRunnable.get(task, releaseTtlValueReferenceAfterRun, idempotent));
         }
